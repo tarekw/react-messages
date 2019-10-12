@@ -14,30 +14,56 @@ class Home extends React.Component {
     this.props.loadMembers();
   }
 
+  state = {
+    id: '',
+  }
+
+  handleMouseEnter = id => {
+    this.setState({
+      id,
+    });
+  }
+
+  handleMouseLeave = () => {
+    this.setState({
+      id: '',
+    });
+  }
+
   render() {
     if (!this.props.messages || !Array.isArray(this.props.messages)) {
       return null;
     }
 
     return (
-      <table className="table table-bordered table-hover">
-          <tbody>
-            {
-              this.props.messages.map(item => {
-                item.imgSrc = this.props.members[item.userId] && this.props.members[item.userId].avatar
-                  ? this.props.members[item.userId].avatar
-                  : PLACEHOLDER;
-        
-                return (
-                  <MessageRow messageItem={item} key={item.id}/>
-                );
-              })
-            }
-          </tbody>
+      <table
+        className="table table-bordered table-hover"
+        onMouseLeave={this.handleMouseLeave}
+      >
+        <tbody>
+          {
+            this.props.messages.map(item => {
+              item.imgSrc = this.props.members[item.userId] && this.props.members[item.userId].avatar
+                ? this.props.members[item.userId].avatar
+                : PLACEHOLDER;
+              
+              item.userEmail =  this.props.members[item.userId] && this.props.members[item.userId].email
+                ? this.props.members[item.userId].email
+                : '';
+
+              return (
+                <MessageRow
+                  messageItem={item}
+                  key={item.id}
+                  onMouseEnter={this.handleMouseEnter}
+                  showEmail={this.state.id === item.id}
+                />
+              );
+            })
+          }
+        </tbody>
       </table>
     )
-
-
   }
 }
 
