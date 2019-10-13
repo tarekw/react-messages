@@ -1,7 +1,120 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<div>
-  This is Test
-</div>
+<table
+  className="table table-bordered table-hover"
+  onMouseLeave={[Function]}
+>
+  <tbody />
+</table>
+`;
+
+exports[`renders correctly when messages and members loaded 1`] = `
+<table
+  className="table table-bordered table-hover"
+  onMouseLeave={[Function]}
+>
+  <tbody>
+    <MessageRow
+      key="cd445e6d-e514-424f-ba8f-16ec842002c6"
+      messageItem={
+        Object {
+          "id": "cd445e6d-e514-424f-ba8f-16ec842002c6",
+          "imgSrc": "http://dummyimage.com/100x100.jpg/5fa2dd/ffffff",
+          "message": "Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla.",
+          "timestamp": "2017-02-09T04:27:38Z",
+          "userEmail": "arosec@bbb.org",
+          "userId": "fe27b760-a915-475c-80bb-7cdf14cc6ef3",
+        }
+      }
+      onMouseEnter={[Function]}
+      showEmail={false}
+    />
+    <MessageRow
+      key="b03569ae-ccbf-4975-8040-4daba638b407"
+      messageItem={
+        Object {
+          "id": "b03569ae-ccbf-4975-8040-4daba638b407",
+          "imgSrc": "http://dummyimage.com/100x100.bmp/5fa2dd/ffffff",
+          "message": "Integer a nibh. In quis justo. Maecenas rhoncus aliquam lacus.",
+          "timestamp": "2016-11-09T05:04:58Z",
+          "userEmail": "lowensm@earthlink.net",
+          "userId": "16373df5-da0a-4074-8295-f916b94269f4",
+        }
+      }
+      onMouseEnter={[Function]}
+      showEmail={false}
+    />
+    <MessageRow
+      key="3a59859e-33f1-4c2b-a636-1f119c484dc8"
+      messageItem={
+        Object {
+          "id": "3a59859e-33f1-4c2b-a636-1f119c484dc8",
+          "imgSrc": "http://dummyimage.com/100x100.jpg/5fa2dd/ffffff",
+          "message": "Suspendisse potenti.",
+          "timestamp": "2016-06-03T20:24:29Z",
+          "userEmail": "phoward12@chronoengine.com",
+          "userId": "976c4919-a8b4-4807-bebb-84ca8448be32",
+        }
+      }
+      onMouseEnter={[Function]}
+      showEmail={false}
+    />
+  </tbody>
+</table>
+`;
+
+exports[`renders correctly when messages loaded 1`] = `
+<table
+  className="table table-bordered table-hover"
+  onMouseLeave={[Function]}
+>
+  <tbody>
+    <MessageRow
+      key="cd445e6d-e514-424f-ba8f-16ec842002c6"
+      messageItem={
+        Object {
+          "id": "cd445e6d-e514-424f-ba8f-16ec842002c6",
+          "imgSrc": "placeholder.png",
+          "message": "Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla.",
+          "timestamp": "2017-02-09T04:27:38Z",
+          "userEmail": "",
+          "userId": "fe27b760-a915-475c-80bb-7cdf14cc6ef3",
+        }
+      }
+      onMouseEnter={[Function]}
+      showEmail={false}
+    />
+    <MessageRow
+      key="b03569ae-ccbf-4975-8040-4daba638b407"
+      messageItem={
+        Object {
+          "id": "b03569ae-ccbf-4975-8040-4daba638b407",
+          "imgSrc": "placeholder.png",
+          "message": "Integer a nibh. In quis justo. Maecenas rhoncus aliquam lacus.",
+          "timestamp": "2016-11-09T05:04:58Z",
+          "userEmail": "",
+          "userId": "16373df5-da0a-4074-8295-f916b94269f4",
+        }
+      }
+      onMouseEnter={[Function]}
+      showEmail={false}
+    />
+    <MessageRow
+      key="3a59859e-33f1-4c2b-a636-1f119c484dc8"
+      messageItem={
+        Object {
+          "id": "3a59859e-33f1-4c2b-a636-1f119c484dc8",
+          "imgSrc": "placeholder.png",
+          "message": "Suspendisse potenti.",
+          "timestamp": "2016-06-03T20:24:29Z",
+          "userEmail": "",
+          "userId": "976c4919-a8b4-4807-bebb-84ca8448be32",
+        }
+      }
+      onMouseEnter={[Function]}
+      showEmail={false}
+    />
+  </tbody>
+</table>
 `;

@@ -17,16 +17,12 @@ It has two publicly exposed functions `getMessages` and `getMembers`. Your tasks
 
 Do not modify `data.js` to achieve these tasks, and do not worry about the styling. Code addition should be unit tested.
 
-1. Render the list of messages from the redux store
+1. Render the list of messages from the redux store :heavy_check_mark:
 
-2. Display the user's email when you hover over the message (using javascript).
+2. Display the user's email when you hover over the message (using javascript). :heavy_check_mark:
 
-3. Display the avatar of the user next to the message
+3. Display the avatar of the user next to the message :heavy_check_mark:
 
-4. Display and format the timestamp of the message to be human readable
+4. Display and format the timestamp of the message to be human readable :heavy_check_mark:
 
-5. Sort the messages by time
-
-## Submission
-
-Please upload your solution to your github account as a public repository, and send the URL to us.
+5. Sort the messages by time :heavy_check_mark:

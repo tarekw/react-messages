@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<tr
+  onMouseEnter={[Function]}
+>
+  <td>
+    <img
+      alt=""
+      className="img-rounded"
+      style={
+        Object {
+          "height": 100,
+          "width": 100,
+        }
+      }
+    />
+  </td>
+  <td>
+    <div>
+      <div />
+      <div>
+        2019–09–13T12:00:00+00:00
+      </div>
+    </div>
+  </td>
+</tr>
+`;

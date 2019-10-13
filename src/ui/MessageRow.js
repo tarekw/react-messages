@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import * as moment from 'moment';
+import moment from 'moment';
 
 const MessageRow = ({ messageItem={}, onMouseEnter=f=>f, showEmail=false }) => (
   <tr onMouseEnter={() => onMouseEnter(messageItem.id)}>
