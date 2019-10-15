@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import renderer from 'react-test-renderer';
+import renderer, { act } from 'react-test-renderer';
 
 import MessageRow from './MessageRow';
 
@@ -18,16 +18,50 @@ it('should handle mouse enter event', () => {
   const props = {
     messageItem: {
         id: '1',
+        userEmail: 'my@email.com',
+        message: 'a message from this user',
+        timestamp: 'time',
+        imgSrc: 'http://avatar.image.com'
     },
-    onMouseEnter: jest.fn(),
   };
 
-  const tree = renderer.create(<MessageRow {...props} />);
+  let tree;
+  
+  act(() => {
+    tree = renderer.create(<MessageRow {...props} />);
+  });
+
+  expect(tree).toMatchSnapshot();
 
   const trTag = tree.root.findAllByType('tr')[0];
 
-  trTag.props.onMouseEnter();
+  act(() => trTag.props.onMouseEnter('1'));
 
-  expect(props.onMouseEnter).toHaveBeenCalled();
-  expect(props.onMouseEnter).toHaveBeenCalledWith(props.messageItem.id);
+  expect(tree).toMatchSnapshot();
+});
+
+it('should handle mouse leave event', () => {
+  const props = {
+    messageItem: {
+        id: '1',
+        userEmail: 'my@email.com',
+        message: 'a message from this user',
+        timestamp: 'time',
+        imgSrc: 'http://avatar.image.com'
+    },
+  };
+
+  let tree;
+  
+  act(() => {
+    tree = renderer.create(<MessageRow {...props} />);
+  });
+
+  const trTag = tree.root.findAllByType('tr')[0];
+
+  act(() => trTag.props.onMouseEnter('1'));  
+  expect(tree).toMatchSnapshot();
+  
+  act(() => trTag.props.onMouseLeave());
+  expect(tree).toMatchSnapshot();
 });

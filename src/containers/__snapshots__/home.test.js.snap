@@ -3,7 +3,6 @@
 exports[`renders correctly 1`] = `
 <table
   className="table table-bordered table-hover"
-  onMouseLeave={[Function]}
 >
   <tbody />
 </table>
@@ -12,7 +11,6 @@ exports[`renders correctly 1`] = `
 exports[`renders correctly when messages and members loaded 1`] = `
 <table
   className="table table-bordered table-hover"
-  onMouseLeave={[Function]}
 >
   <tbody>
     <MessageRow
@@ -27,8 +25,6 @@ exports[`renders correctly when messages and members loaded 1`] = `
           "userId": "fe27b760-a915-475c-80bb-7cdf14cc6ef3",
         }
       }
-      onMouseEnter={[Function]}
-      showEmail={false}
     />
     <MessageRow
       key="b03569ae-ccbf-4975-8040-4daba638b407"
@@ -42,8 +38,6 @@ exports[`renders correctly when messages and members loaded 1`] = `
           "userId": "16373df5-da0a-4074-8295-f916b94269f4",
         }
       }
-      onMouseEnter={[Function]}
-      showEmail={false}
     />
     <MessageRow
       key="3a59859e-33f1-4c2b-a636-1f119c484dc8"
@@ -57,8 +51,6 @@ exports[`renders correctly when messages and members loaded 1`] = `
           "userId": "976c4919-a8b4-4807-bebb-84ca8448be32",
         }
       }
-      onMouseEnter={[Function]}
-      showEmail={false}
     />
   </tbody>
 </table>
@@ -67,7 +59,6 @@ exports[`renders correctly when messages and members loaded 1`] = `
 exports[`renders correctly when messages loaded 1`] = `
 <table
   className="table table-bordered table-hover"
-  onMouseLeave={[Function]}
 >
   <tbody>
     <MessageRow
@@ -82,8 +73,6 @@ exports[`renders correctly when messages loaded 1`] = `
           "userId": "fe27b760-a915-475c-80bb-7cdf14cc6ef3",
         }
       }
-      onMouseEnter={[Function]}
-      showEmail={false}
     />
     <MessageRow
       key="b03569ae-ccbf-4975-8040-4daba638b407"
@@ -97,8 +86,6 @@ exports[`renders correctly when messages loaded 1`] = `
           "userId": "16373df5-da0a-4074-8295-f916b94269f4",
         }
       }
-      onMouseEnter={[Function]}
-      showEmail={false}
     />
     <MessageRow
       key="3a59859e-33f1-4c2b-a636-1f119c484dc8"
@@ -112,8 +99,6 @@ exports[`renders correctly when messages loaded 1`] = `
           "userId": "976c4919-a8b4-4807-bebb-84ca8448be32",
         }
       }
-      onMouseEnter={[Function]}
-      showEmail={false}
     />
   </tbody>
 </table>

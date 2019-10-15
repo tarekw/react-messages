@@ -14,32 +14,13 @@ class Home extends React.Component {
     this.props.loadMembers();
   }
 
-  state = {
-    id: '',
-  }
-
-  handleMouseEnter = id => {
-    this.setState({
-      id,
-    });
-  }
-
-  handleMouseLeave = () => {
-    this.setState({
-      id: '',
-    });
-  }
-
   render() {
     if (!this.props.messages || !Array.isArray(this.props.messages)) {
       return null;
     }
 
     return (
-      <table
-        className="table table-bordered table-hover"
-        onMouseLeave={this.handleMouseLeave}
-      >
+      <table className="table table-bordered table-hover">
         <tbody>
           {
             this.props.messages.map(item => {
@@ -55,8 +36,6 @@ class Home extends React.Component {
                 <MessageRow
                   messageItem={item}
                   key={item.id}
-                  onMouseEnter={this.handleMouseEnter}
-                  showEmail={this.state.id === item.id}
                 />
               );
             })

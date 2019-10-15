@@ -3,6 +3,7 @@
 exports[`renders correctly 1`] = `
 <tr
   onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
 >
   <td>
     <img
@@ -19,6 +20,120 @@ exports[`renders correctly 1`] = `
   <td>
     <div>
       <div />
+      <div>
+        2019–09–13T12:00:00+00:00
+      </div>
+    </div>
+  </td>
+</tr>
+`;
+
+exports[`should handle mouse enter event 1`] = `
+<tr
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  <td>
+    <img
+      alt=""
+      className="img-rounded"
+      src="http://avatar.image.com"
+      style={
+        Object {
+          "height": 100,
+          "width": 100,
+        }
+      }
+    />
+  </td>
+  <td>
+    <div>
+      <div>
+        a message from this user
+      </div>
+      <div>
+        2019–09–13T12:00:00+00:00
+      </div>
+    </div>
+  </td>
+</tr>
+`;
+
+exports[`should handle mouse enter event 2`] = `
+<tr
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  <td>
+    <img
+      alt=""
+      className="img-rounded"
+      src="http://avatar.image.com"
+      style={
+        Object {
+          "height": 100,
+          "width": 100,
+        }
+      }
+    />
+  </td>
+  <td>
+    <div>
+      my@email.com
+    </div>
+  </td>
+</tr>
+`;
+
+exports[`should handle mouse leave event 1`] = `
+<tr
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  <td>
+    <img
+      alt=""
+      className="img-rounded"
+      src="http://avatar.image.com"
+      style={
+        Object {
+          "height": 100,
+          "width": 100,
+        }
+      }
+    />
+  </td>
+  <td>
+    <div>
+      my@email.com
+    </div>
+  </td>
+</tr>
+`;
+
+exports[`should handle mouse leave event 2`] = `
+<tr
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  <td>
+    <img
+      alt=""
+      className="img-rounded"
+      src="http://avatar.image.com"
+      style={
+        Object {
+          "height": 100,
+          "width": 100,
+        }
+      }
+    />
+  </td>
+  <td>
+    <div>
+      <div>
+        a message from this user
+      </div>
       <div>
         2019–09–13T12:00:00+00:00
       </div>
