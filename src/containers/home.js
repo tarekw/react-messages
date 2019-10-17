@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
@@ -8,42 +8,36 @@ import { loadMembers } from '../action-creators/members';
 import MessageRow from '../ui/MessageRow';
 import PLACEHOLDER from '../assets/placeholder.png';
 
-class Home extends React.Component {
-  componentDidMount() {
-    this.props.loadMessages();
-    this.props.loadMembers();
-  }
+const Home = ({ loadMessages=f=>f, loadMembers=f=>f, messages=[], members={} }) => {
+  useEffect(() => {
+    loadMessages();
+    loadMembers();
+  }, []);
 
-  render() {
-    if (!this.props.messages || !Array.isArray(this.props.messages)) {
-      return null;
-    }
+  return (
+    <table className='table table-bordered table-hover'>
+      <tbody>
+        {
+          messages.map(item => {
+            item.imgSrc = members[item.userId] && members[item.userId].avatar
+              ? members[item.userId].avatar
+              : PLACEHOLDER;
+            
+            item.userEmail =  members[item.userId] && members[item.userId].email
+              ? members[item.userId].email
+              : '';
 
-    return (
-      <table className="table table-bordered table-hover">
-        <tbody>
-          {
-            this.props.messages.map(item => {
-              item.imgSrc = this.props.members[item.userId] && this.props.members[item.userId].avatar
-                ? this.props.members[item.userId].avatar
-                : PLACEHOLDER;
-              
-              item.userEmail =  this.props.members[item.userId] && this.props.members[item.userId].email
-                ? this.props.members[item.userId].email
-                : '';
-
-              return (
-                <MessageRow
-                  messageItem={item}
-                  key={item.id}
-                />
-              );
-            })
-          }
-        </tbody>
-      </table>
-    )
-  }
+            return (
+              <MessageRow
+                messageItem={item}
+                key={item.id}
+              />
+            );
+          })
+        }
+      </tbody>
+    </table>
+  );
 }
 
 const mapStateToProps = state => ({
@@ -56,6 +50,8 @@ const mapDispatchToProps = dispatch => bindActionCreators({ loadMessages, loadMe
 Home.propTypes = {
   loadMessages: PropTypes.func,
   loadMembers: PropTypes.func,
+  messages: PropTypes.array,
+  members: PropTypes.object,
 };
 
 export default connect(

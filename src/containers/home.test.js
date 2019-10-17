@@ -1,5 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+import renderer, { act } from 'react-test-renderer';
 
 import Home from './home';
 
@@ -105,7 +106,9 @@ it('should fetch messages and members data on load', () => {
     loadMembers: jest.fn(),
   };
 
-  shallow(<Home.WrappedComponent {...props} />);
+  act(() => {
+    renderer.create(<Home.WrappedComponent {...props} />);
+  });
 
   expect(props.loadMessages).toHaveBeenCalled();
   expect(props.loadMembers).toHaveBeenCalled();

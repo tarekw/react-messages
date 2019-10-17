@@ -8,7 +8,7 @@ exports[`renders correctly 1`] = `
   <td>
     <img
       alt=""
-      className="img-rounded"
+      className="rounded"
       style={
         Object {
           "height": 100,
@@ -36,7 +36,7 @@ exports[`should handle mouse enter event 1`] = `
   <td>
     <img
       alt=""
-      className="img-rounded"
+      className="rounded"
       src="http://avatar.image.com"
       style={
         Object {
@@ -67,7 +67,7 @@ exports[`should handle mouse enter event 2`] = `
   <td>
     <img
       alt=""
-      className="img-rounded"
+      className="rounded"
       src="http://avatar.image.com"
       style={
         Object {
@@ -93,7 +93,7 @@ exports[`should handle mouse leave event 1`] = `
   <td>
     <img
       alt=""
-      className="img-rounded"
+      className="rounded"
       src="http://avatar.image.com"
       style={
         Object {
@@ -119,7 +119,7 @@ exports[`should handle mouse leave event 2`] = `
   <td>
     <img
       alt=""
-      className="img-rounded"
+      className="rounded"
       src="http://avatar.image.com"
       style={
         Object {
